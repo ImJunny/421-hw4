@@ -1,0 +1,29 @@
+#lists-container{
+  overflow:hidden;
+  margin:auto;
+}
+
+.list{
+  display:flex;
+  background-color:beige; 
+  overflow: hidden;
+}
+
+.tile{
+  width:100px;
+  height:100px;
+  background-color:burlywood;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size:30px;
+  cursor:pointer;
+  box-shadow: 0 0 2px 1px black;
+  border-radius: 10px;
+  margin:2px;
+}
+
+.empty-tile{
+  opacity: 0;
+  cursor:default
+}
