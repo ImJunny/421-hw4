@@ -1,1 +1,55 @@
-<p>puzzle works!</p>
+<div id="page">
+<div id="game-container">
+  <div cdkDropListGroup id="lists-container">
+
+    <div
+      cdkDropList
+      cdkDropListOrientation="horizontal"
+      [cdkDropListData]="list1"
+      class="list"
+      (cdkDropListDropped)="drop($event)">
+      @for (item of list1; track item) {
+        <div *ngIf="item!='x'" class="tile" cdkDrag>{{item}}</div>
+        <div *ngIf="item=='x'" class="tile empty-tile" cdkDrag cdkDragDisabled="true"></div>
+      }
+    </div>
+  
+    <div
+      cdkDropList
+      cdkDropListOrientation="horizontal"
+      [cdkDropListData]="list2"
+      class="list"
+      (cdkDropListDropped)="drop($event)">
+      @for (item of list2; track item) {
+        <div *ngIf="item!='x'" class="tile" cdkDrag>{{item}}</div>
+        <div *ngIf="item=='x'" class="tile empty-tile" cdkDrag cdkDragDisabled="true"></div>
+      }
+    </div>
+
+    <div
+      cdkDropList
+      cdkDropListOrientation="horizontal"
+      [cdkDropListData]="list3"
+      class="list"
+      (cdkDropListDropped)="drop($event)">
+      @for (item of list3; track item) {
+        <div *ngIf="item!='x'" class="tile" cdkDrag>{{item}}</div>
+        <div *ngIf="item=='x'" class="tile empty-tile" cdkDrag cdkDragDisabled="true"></div>
+      }
+    </div>
+
+    <div
+      cdkDropList
+      cdkDropListOrientation="horizontal"
+      [cdkDropListData]="list4"
+      class="list"
+      (cdkDropListDropped)="drop($event)">
+      @for (item of list4; track item) {
+        <div *ngIf="item!='x'" class="tile" cdkDrag>{{item}}</div>
+        <div *ngIf="item=='x'" class="tile empty-tile" cdkDrag cdkDragDisabled="true"></div>
+      }
+    </div>
+
+
+  </div>
+</div>
