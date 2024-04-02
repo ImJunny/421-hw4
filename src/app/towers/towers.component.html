@@ -1,0 +1,65 @@
+<div id="page">
+  <div id="game-container">
+    <div cdkDropListGroup id="towers-container">
+      <div class="tower">
+        <div class="line"></div>
+        <div
+          cdkDropList
+          cdkDropListSortingDisabled
+          [cdkDropListData]="disks1"
+          class="list"
+          (cdkDropListDropped)="drop($event)"
+        >
+          @for (item of disks1; track item) {
+          <div
+            [cdkDragDisabled]="topDisks.includes(item) ? false : true"
+            [ngClass]="item"
+            class="disk"
+            cdkDrag
+          ></div>
+          }
+        </div>
+      </div>
+
+      <div class="tower">
+        <div class="line"></div>
+        <div
+          cdkDropList
+          cdkDropListSortingDisabled
+          [cdkDropListData]="disks2"
+          class="list"
+          (cdkDropListDropped)="drop($event)"
+        >
+          @for (item of disks2; track item) {
+          <div
+            [cdkDragDisabled]="topDisks.includes(item) ? false : true"
+            [ngClass]="item"
+            class="disk"
+            cdkDrag
+          ></div>
+          }
+        </div>
+      </div>
+
+      <div class="tower">
+        <div class="line"></div>
+        <div
+          cdkDropList
+          cdkDropListSortingDisabled
+          [cdkDropListData]="disks3"
+          class="list"
+          (cdkDropListDropped)="drop($event)"
+        >
+          @for (item of disks3; track item) {
+          <div
+            [cdkDragDisabled]="topDisks.includes(item) ? false : true"
+            [ngClass]="item"
+            class="disk"
+            cdkDrag
+          ></div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
