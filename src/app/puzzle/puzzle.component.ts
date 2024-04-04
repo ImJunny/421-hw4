@@ -25,7 +25,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './puzzle.component.css',
 })
 export class PuzzleComponent {
-  tiles: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 11, 12, 13, 14, 15];
+  tiles: number[] = [4, 11, 8, 15, 14, 5, 3, 10, 1, 13, 0, 9, 7, 12, 2, 6];
 
   drop(event: CdkDragDrop<number>) {
     let draggedIndex = event.previousContainer.data;
